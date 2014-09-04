@@ -5,7 +5,6 @@ var express = require('express');
 // var session = require('express-session');
 //request.session POJO
 
-
 var app = express();
 // kicks off the app
 
@@ -19,7 +18,11 @@ var app = express();
 // }));
 
 app.use(express.static('./client/'));
-//serves html in the client directory? 
+//serves html in the client directory? Does it 
+
+console.log('listening...')
+
+
 
 app.listen(3000);
 
