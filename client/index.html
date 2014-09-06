@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="helloMEAN">
-<head>
-  <title>tit-le</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
+  <head>
+    <title>tit-le</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div ng-view>
+      <!-- view goes in here. -->
+    </div>
 
+    <form action="/user" method="POST">
+      <p>name: </p><input type="text" name="name">
+      <p>age: </p><input type="number" name="age">
+      <p>location: </p><input type="text" name="location">
+      <p>description: </p><input type="text" name="description">
 
-  <script type="text/javascript" src="app.js"></script>
+      <input type="submit" value="submit">
+    </form>
 
-</head>
-<body>
-  <div ng-view>
-    
-
-  </div>
-
-</body>
+  </body>
 </html>
+
