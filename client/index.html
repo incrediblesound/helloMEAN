@@ -4,7 +4,6 @@
     <title>tit-le</title>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
-      <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
     <div ng-view>
@@ -20,6 +19,9 @@
       <input type="submit" value="submit">
     </form>
 
+    
+    <!-- load javascript after body loads -->
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
 

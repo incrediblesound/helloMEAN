@@ -48,6 +48,7 @@ app.post('/user', function(request, response) {
   });
 });
 
+//ought refactor to modules later at some point in the future
 app.get('/getusers', function(request, response) {
   User.find(function(err, users){
     users = JSON.stringify(users);
