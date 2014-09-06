@@ -21,12 +21,12 @@ angular.module('helloMEAN', ['ngRoute'])
         $scope.users = response.data;
       });
 
-    $scope.display = function(name) {
-      $http.get('/getuser/' + name)
-        .then (function(response) {
-          console.log(response.data);
-        });
-    };
+    // $scope.display = function(name) {
+    //   $http.get('/getuser/' + name)
+    //     .then (function(response) {
+    //       console.log(response.data);
+    //     });
+    // };
   }
   function viewYouController($scope, $http) {
     $scope.data = 'ho';
