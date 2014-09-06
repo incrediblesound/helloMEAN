@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="helloMEAN">
-<head>
-  <title>tit-le</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <head>
+    <title>tit-le</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div ng-view>
+      <!-- view goes in here. -->
+    </div>
 
-</head>
-<body>
-  <div ng-view>
-    
+    <form action="/user" method="POST">
+      <p>name: </p><input type="text" name="name">
+      <p>age: </p><input type="number" name="age">
+      <p>location: </p><input type="text" name="location">
+      <p>description: </p><input type="text" name="description">
 
-  </div>
+      <input type="submit" value="submit">
+    </form>
 
-<form action="/server.js" method="POST">
-  <p>name: <input type="text" name="name"></p>
-  <input type="submit" value="sensible">
-</form>
-
- <!-- <FORM action="http://somesite.com/prog/adduser" method="post">
-    <P>
-    First name: <INPUT type="text" name="firstname"><BR>
-    Last name: <INPUT type="text" name="lastname"><BR>
-    email: <INPUT type="text" name="email"><BR>
-    <INPUT type="radio" name="sex" value="Male"> Male<BR>
-    <INPUT type="radio" name="sex" value="Female"> Female<BR>
-    <INPUT type="submit" value="Send"> <INPUT type="reset">
-    </P>
- </FORM> -->
-
-
-</body>
+  </body>
 </html>
 
