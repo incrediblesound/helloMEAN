@@ -6,11 +6,11 @@ var UserSchema = new Schema({
     type: String, 
     unique: true
   }, 
-  age: Number,
+  age: String,
   location: String,
   description: String
 });
 
 var User = mongoose.model('user', UserSchema);
 
-mongoose.connect('mongodb://localhost/test2');
+mongoose.connect('mongodb://localhost/test3');

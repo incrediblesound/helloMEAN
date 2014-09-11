@@ -1,3 +1,8 @@
+/*
+Hello and welcome noobs. I'll be the noob showing you around this here code today.
+*/
+
+
 require('./db.js')
 // mongoose schema must be loaded first
 
@@ -13,7 +18,7 @@ var bodyParser = require('body-parser');
 // converts form data to object accessible thru request.body
 
 // var session = require('express-session');
-// // request.session POJO
+// request.session POJO
 
 var app = express();
 // kicks off the app
