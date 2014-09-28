@@ -13,4 +13,6 @@ var UserSchema = new Schema({
 
 var User = mongoose.model('user', UserSchema);
 
-mongoose.connect('mongodb://localhost/test3');
+var dbUrl = process.env.MONGHQ_URL || 'mongodb://localhost/test3'
+
+mongoose.connect(dbUrl);
