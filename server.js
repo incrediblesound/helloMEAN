@@ -22,6 +22,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 // kicks off the app
+console.log(app);
 
 app.use(bodyParser());
 // body parser depricated?
