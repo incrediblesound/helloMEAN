@@ -1,6 +1,3 @@
-/*
-Hello and welcome noobs. I'll be the noob showing you around this here code today.
-*/
 
 
 require('./db.js')
@@ -78,4 +75,3 @@ app.listen(3000);
 
 
 // where do you install modules/dependencies? global or local? task runners?
-// nested controllers t
