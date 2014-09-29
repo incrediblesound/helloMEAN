@@ -1,0 +1,20 @@
+{
+  "name": "helloMEAN",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mattphoto/helloMEAN",
+  "authors": [
+    "mattphoto <github@mattkim.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "bootstrap": "~3.2.0"
+  }
+}

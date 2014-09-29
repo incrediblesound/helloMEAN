@@ -66,7 +66,6 @@ app.get('/getuser/:name', function(request, response) {
   });
 });
 
-
 app.listen(3000);
 
 
