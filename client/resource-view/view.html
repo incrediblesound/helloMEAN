@@ -1,0 +1,5 @@
+<div ng-repeat="user in users">
+  <p><b>{{user.name}}</b> : {{user.age}} : {{user.location}} : {{user.description}}</p>
+  <button ng-click="update(user)">UPDATE</button>
+  <button ng-click="delete(user)">delete</button>
+</div>

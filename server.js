@@ -1,16 +1,12 @@
 
 
 require('./db.js')
-// mongoose schema must be loaded first
 
 var express = require('express'); 
-// bootstraps express server, does that mean no node code?
 
 var mongoose = require('mongoose');
 var User = mongoose.model('user');
-// standard mongoose pattern
 
-// bootstraps express server
 var bodyParser = require('body-parser'); 
 // converts form data to object accessible thru request.body
 
@@ -31,8 +27,6 @@ app.use(bodyParser());
 // }));
 
 app.use(express.static('./client/'));
-//serves html in the client directory? Does it 
-
 
 // posts to mongodb
 app.post('/user', function(request, response) {
@@ -65,6 +59,26 @@ app.get('/getuser/:name', function(request, response) {
     response.end(user)
   });
 });
+
+app.get('/delete/:name', function(request, response) {
+  User.findOne({name: request.params.name}, function(err, user){
+    user.remove();
+    response.end();
+  })
+})
+
+app.post('/updateuser/', function(request, response) {
+  var user = request.body;
+  User.findOneAndUpdate({name: request.params.name},{
+    name: user.name,
+    age: user.age,
+    location: request.body.location,
+    description: request.body.description
+  },{upsert: true}, function(err, data){
+    if(err) { console.log(err) }
+      response.end();
+  })
+})
 
 var port = process.env.PORT || 3000
 

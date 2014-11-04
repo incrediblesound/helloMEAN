@@ -1,36 +1,30 @@
 angular.module('helloMEAN', ['ngRoute'])
   .config(function($routeProvider){
     $routeProvider
-    .when('/', {                    // where does .when come from?
-      templateUrl: './viewMe.html',
-      controller: viewMeController
-    })
-    .when('/viewMe', {
-      templateUrl: './viewMe.html',
-      controller: viewMeController
-    })
-    .when('/viewYou', {
-      templateUrl: './viewYou.html',
-      controller: viewYouController
+    .when('/', {                    
+      templateUrl: './resource-view/view.html',
+      controller: "viewCtrl"
     })
   })
 
-  function viewMeController($scope, $http) {
-    $http.get('/getusers')
-      .then(function(response) {
-        $scope.users = response.data;
-      });
+  // function userController($scope, $http) {
+  //   $scope.user = {};
+  //   $http.get('/getusers')
+  //     .then(function(response) {
+  //       $scope.users = response.data;
+  //     });
+  //   $scope.update = function(user){
+  //     console.log(user);
+  //     $scope.user.name = user.name;
+  //   }
+  //   $scope.delete = function(user){
+  //     $http.get('/delete/'+user.name);
+  //   }
+  // }
 
-    // $scope.display = function(name) {
-    //   $http.get('/getuser/' + name)
-    //     .then (function(response) {
-    //       console.log(response.data);
-    //     });
-    // };
-  }
-  function viewYouController($scope, $http) {
-    $scope.data = 'ho';
-  }
+// todo move $http.get(users) into a factory
+// refresh page on delete
+
 
 /*
 you can still use {{ }} in the majority of your templates. For the data binding you do in your index.html page, however, use ng-bind instead. That way, your users will see nothing until the data has loaded.
