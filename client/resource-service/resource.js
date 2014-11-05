@@ -4,28 +4,32 @@ angular.module('helloMEAN')
       get: get,
       remove: remove,
       update: update,
-      current: current
+      setCurrent: setCurrent,
+      getCurrent: getCurrent,
+      save: save
     };
     return services;
 
-    var current = {
-      name: '',
-      age: '',
-      description: '',
-      location: '',
-      updated: ''
-    };
+    var currentData = {};
 
-    function current(){
+    function getCurrent(){
       return currentData;
+    }
+
+    function setCurrent(data){
+      return currentData = data;
     }
 
     function get(){
       return $http.get('/getusers');
     }
 
+    function save(user){
+      return $http.post('/user', user);
+    }
+
     function update(user){
-      current = user
+      services.current = user
     }
 
     function remove(user){

@@ -1,5 +1,5 @@
 <div ng-controller="ui-form">
-  <form action="/updateuser" method="POST">
+  <form name="user-form">
     <div  class="form-group">
       <p>title: <input type="text" name="name" ng-model="user.name"></p>
       <p>url: <input type="text" name="age" ng-model="user.age"></p>
@@ -7,7 +7,7 @@
       <p>description: <input type="text" name="description" ng-model="user.description"></p>
       <p>last updated: <input type="text" name="updated" ng-model="user.updated"></p>
 
-      <input type="submit" class="btn btn-primary" value="submit">
+      <button ng-click="save()" class="btn btn-primary">SUBMIT</button>
     </div>
   </form>
 </div>
